@@ -2,7 +2,7 @@
   "name": "b64u-lite",
   "amdName": "b64uLite",
   "version": "0.0.1",
-  "description": "isomorphic base64url library in 361 bytes",
+  "description": "isomorphic base64url library in 194 bytes",
   "main": "dist/b64u-lite.js",
   "module": "dist/b64u-lite.mjs",
   "files": [
@@ -14,7 +14,7 @@
     "test": "node test.js",
     "build": "npm run build:unbundled && npm run build:bundle",
     "build:unbundled": "microbundle --entry index.mjs --output dist --external all --compress false",
-    "build:bundle": "microbundle --entry index.mjs --output bundle",
+    "build:bundle": "microbundle --entry index.mjs --output bundle --target browser",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "repository": {
@@ -31,10 +31,10 @@
     "url": "https://github.com/kevlened/b64u-lite/issues"
   },
   "homepage": "https://github.com/kevlened/b64u-lite#readme",
+  "dependencies": {
+    "b64-lite": "^1.1.1"
+  },
   "devDependencies": {
     "microbundle": "^0.2.4"
-  },
-  "dependencies": {
-    "b64-lite": "^1.1.0"
   }
 }

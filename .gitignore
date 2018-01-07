@@ -1,5 +1,6 @@
 dist
 bundle
+.vscode
 
 # Logs
 logs
