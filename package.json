@@ -12,7 +12,9 @@
   "scripts": {
     "pretest": "npm run build",
     "test": "node test.js",
-    "build": "microbundle --entry index.mjs --output dist --external all --compress false && microbundle --entry index.mjs --output bundle",
+    "build": "npm run build:unbundled && npm run build:bundle",
+    "build:unbundled": "microbundle --entry index.mjs --output dist --external all --compress false",
+    "build:bundle": "microbundle --entry index.mjs --output bundle",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "repository": {
@@ -33,6 +35,6 @@
     "microbundle": "^0.2.4"
   },
   "dependencies": {
-    "b64-lite": "^1.0.1"
+    "b64-lite": "^1.1.0"
   }
 }
