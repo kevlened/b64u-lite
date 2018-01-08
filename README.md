@@ -1,6 +1,6 @@
 # b64u-lite [![NPM](https://img.shields.io/npm/v/b64u-lite.svg)](https://npmjs.com/package/b64u-lite) [![Build](https://travis-ci.org/kevlened/b64u-lite.svg?branch=master)](https://travis-ci.org/kevlened/b64u-lite)
 
-isomorphic base64url library in 264 bytes
+isomorphic base64url library in 244 bytes
 
 ## Usage
 
@@ -8,17 +8,15 @@ isomorphic base64url library in 264 bytes
 const b64u = require('b64u-lite');
 
 b64u.toBase64Url('hi there? 你好');
-b64u.encode('hi there? 你好');
 // aGkgdGhlcmU_IOS9oOWlvQ
 
 // add padding
 b64u.toBase64Url('hi there? 你好', true);
-b64u.encode('hi there? 你好', true);
 // aGkgdGhlcmU_IOS9oOWlvQ==
 
 // works with or without padding
 b64u.fromBase64Url('aGkgdGhlcmU_IOS9oOWlvQ==');
-b64u.decode('aGkgdGhlcmU_IOS9oOWlvQ==');
+b64u.fromBase64Url('aGkgdGhlcmU_IOS9oOWlvQ');
 // hi there? 你好
 
 // equivalent to btoa

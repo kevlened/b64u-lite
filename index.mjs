@@ -25,6 +25,3 @@ export function fromBase64Url(b64u) {
     .replace(/-/g, '+')
     .replace(/_/g, '/'))
 }
-
-export const encode = toBase64Url
-export const decode = fromBase64Url

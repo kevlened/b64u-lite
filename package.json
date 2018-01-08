@@ -2,7 +2,7 @@
   "name": "b64u-lite",
   "amdName": "b64uLite",
   "version": "1.0.0",
-  "description": "isomorphic base64url library in 264 bytes",
+  "description": "isomorphic base64url library in 244 bytes",
   "main": "dist/b64u-lite.js",
   "module": "dist/b64u-lite.mjs",
   "files": [
