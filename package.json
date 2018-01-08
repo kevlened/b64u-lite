@@ -1,7 +1,7 @@
 {
   "name": "b64u-lite",
   "amdName": "b64uLite",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "isomorphic base64url library in 264 bytes",
   "main": "dist/b64u-lite.js",
   "module": "dist/b64u-lite.mjs",
