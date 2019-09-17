@@ -1,6 +1,6 @@
 # b64u-lite [![NPM](https://img.shields.io/npm/v/b64u-lite.svg)](https://npmjs.com/package/b64u-lite) [![Build](https://travis-ci.org/kevlened/b64u-lite.svg?branch=master)](https://travis-ci.org/kevlened/b64u-lite) [![bundlephobia](https://img.shields.io/bundlephobia/minzip/b64u-lite.svg)](https://bundlephobia.com/result?p=b64u-lite)
 
-isomorphic base64url library in 244 bytes
+isomorphic base64url library
 
 ## Usage
 
