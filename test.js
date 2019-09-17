@@ -9,5 +9,8 @@ assert.equal(b64u.toBase64Url('hi there? 你好'), 'aGkgdGhlcmU_IOS9oOWlvQ')
 assert.equal(b64u.toBase64Url('hi there? 你好', true), 'aGkgdGhlcmU_IOS9oOWlvQ==')
 assert.equal(b64u.fromBase64Url('aGkgdGhlcmU_IOS9oOWlvQ=='), 'hi there? 你好')
 assert.equal(b64u.fromBase64Url('aGkgdGhlcmU_IOS9oOWlvQ'), 'hi there? 你好')
+assert.equal(b64u.toBase64Url(new Uint8Array([228, 189, 160, 229, 165, 189]).buffer), '5L2g5aW9')
+assert.equal(b64u.toBase64Url(new Uint8Array([104, 105, 32, 116, 104, 101, 114, 101]).buffer), 'aGkgdGhlcmU')
+assert.equal(Buffer.compare(b64u.toBuffer('5L2g5aW9'), new Uint8Array([228, 189, 160, 229, 165, 189])), 0)
 
 console.log(`✅ Success!`)

@@ -2,7 +2,7 @@
   "name": "b64u-lite",
   "amdName": "b64uLite",
   "version": "1.0.1",
-  "description": "isomorphic base64url library in 244 bytes",
+  "description": "isomorphic base64url library in 358 bytes",
   "main": "dist/b64u-lite.js",
   "module": "dist/b64u-lite.mjs",
   "files": [
@@ -13,8 +13,8 @@
     "pretest": "npm run build",
     "test": "node test.js",
     "build": "npm run build:unbundled && npm run build:bundle",
-    "build:unbundled": "microbundle --entry index.mjs --output dist --external all --compress false",
-    "build:bundle": "microbundle --entry index.mjs --output bundle --target browser",
+    "build:unbundled": "microbundle --entry index.mjs --output dist --external b64-lite --compress false",
+    "build:bundle": "microbundle --entry index.mjs --output bundle --external none --target browser",
     "release": "npm test && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "repository": {
@@ -24,7 +24,9 @@
   "keywords": [
     "isomorphic",
     "base64url",
-    "b64u"
+    "b64u",
+    "react",
+    "native"
   ],
   "license": "MIT",
   "bugs": {
@@ -32,9 +34,9 @@
   },
   "homepage": "https://github.com/kevlened/b64u-lite#readme",
   "dependencies": {
-    "b64-lite": "^1.1.1"
+    "b64-lite": "^1.4.0"
   },
   "devDependencies": {
-    "microbundle": "^0.2.4"
+    "microbundle": "^0.11.0"
   }
 }
